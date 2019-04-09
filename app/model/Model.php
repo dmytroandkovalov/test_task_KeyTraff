@@ -7,9 +7,9 @@ class Model
     private $pdo;
 
 
-    public function __construct($db_name = 'testworktrafgid', $db_user = 'root', $db_pass = '' )
+    public function __construct($db_host = DB_HOST, $db_name = DB_NAME, $db_user = DB_USER, $db_pass = DB_PASSSWORD )
     {
-        $this->pdo = new PDO('mysql:host=localhost;dbname=' .$db_name, $db_user, $db_pass);
+        $this->pdo = new PDO("mysql:host=$db_host;dbname=$db_name", $db_user, $db_pass);
     }
 
     public function getRequest1()

@@ -3,6 +3,7 @@
 
     define('APPPATH', __DIR__ .'\app');
 
+    require_once (APPPATH. '\setting.php');
     require_once ('Router.php');
 
     require_once (APPPATH .'/includes/header.php');
